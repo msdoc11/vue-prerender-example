@@ -2,7 +2,8 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link> |
+      <router-link to="/companies">Companies</router-link>
     </div>
     <router-view/>
   </div>
@@ -25,5 +26,12 @@
       color: #42b983;
     }
   }
+}
+pre {
+  text-align: left;
+  background: #111;
+  color: #49e0dc;
+  padding: 20px;
+  border-radius: 4px;
 }
 </style>

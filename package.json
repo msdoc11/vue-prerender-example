@@ -6,10 +6,15 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "prebuild": "node scripts/fetch-data",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
     "vue": "^2.5.21",
+    "vue-axios": "^2.1.4",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
@@ -26,6 +31,7 @@
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
+    "prerender-spa-plugin": "^3.4.0",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.21"
   }
