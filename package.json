@@ -6,9 +6,8 @@
     "start": "npm-run-all --parallel server frontend",
     "frontend": "vue-cli-service serve",
     "server": "node server",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build:prerender",
     "lint": "vue-cli-service lint",
-    "prebuild": "node scripts/fetch-data",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
@@ -38,5 +37,10 @@
     "prerender-spa-plugin": "^3.4.0",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.21"
+  },
+  "vuePlugins": {
+    "service": [
+      "build.prerender.js"
+    ]
   }
 }
