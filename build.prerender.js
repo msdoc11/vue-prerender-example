@@ -8,9 +8,7 @@ module.exports = (api) => {
     const { companies } = data;
     api.chainWebpack((config) => {
       config.plugin('prerender').use(PrerenderSPAPlugin, [{
-        // Required - The path to the webpack-outputted app to prerender.
         staticDir: path.join(__dirname, 'dist'),
-        // Required - Routes to render.
         routes: ['/'].concat(companies.map(company => `/companies/${company}`))
       }]);
     });
