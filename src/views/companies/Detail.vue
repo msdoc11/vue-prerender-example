@@ -16,19 +16,19 @@ export default {
     return {
       company: null,
       loaded: false
-    }
+    };
   },
   mounted() {
-    this.fetch()
+    this.fetch();
   },
   methods: {
     async fetch() {
-      const { data } = await this.axios.get(`http://localhost:4201/companies/${this.$route.params.name}`)
-      this.company = data
-      this.loaded = true
+      const { data } = await this.axios.get(`http://localhost:4201/companies/${this.$route.params.name}`);
+      this.company = data;
+      this.loaded = true;
     }
   }
-}
+};
 </script>
 
 <!--/////////////////////////////////////////////////////////////////////////////////////////////-->

@@ -1,12 +1,12 @@
-const express = require('express')
-const cors = require('cors')
+const express = require('express');
+const cors = require('cors');
 
-const PORT = process.env.BACKEND_PORT || 4201
-const app = express()
+const PORT = process.env.BACKEND_PORT || 4201;
+const app = express();
 
-app.use(cors())
-app.use(express.json())
-app.listen(PORT)
+app.use(cors());
+app.use(express.json());
+app.listen(PORT);
 
 const db = {
   test1: {
@@ -29,15 +29,17 @@ const db = {
     name: 'Test 5',
     description: 'This is the test 5 description'
   }
-}
+};
 
 app.get('/companies', async(req, res) => {
   res.send({
     companies: Object.keys(db)
-  })
-})
+  });
+});
 
 app.get('/companies/:name', async(req, res) => {
-  const company = req.params.name
-  res.send(db[company])
-})
+  const company = req.params.name;
+  res.send(db[company]);
+});
+
+console.log(`Listening on port ${PORT}`);

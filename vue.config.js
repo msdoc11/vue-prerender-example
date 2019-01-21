@@ -1,6 +1,6 @@
-const path = require('path')
-const PrerenderSPAPlugin = require('prerender-spa-plugin')
-const routes = require('./data')
+const path = require('path');
+const PrerenderSPAPlugin = require('prerender-spa-plugin');
+const routes = require('./data');
 
 module.exports = {
   lintOnSave: 'error',
@@ -10,8 +10,8 @@ module.exports = {
         // Required - The path to the webpack-outputted app to prerender.
         staticDir: path.join(__dirname, 'dist'),
         // Required - Routes to render.
-        routes: [ '/', '/about' ].concat(routes)
+        routes: ['/', '/about'].concat(routes)
       })
     ]
   }
-}
+};
