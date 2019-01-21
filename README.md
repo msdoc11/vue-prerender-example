@@ -25,10 +25,6 @@ npm run test
 npm run lint
 ```
 
-### Run your unit tests
-```
-npm run test:unit
-```
+### Prerendering
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+There is a npm scripts hook that runs before `npm run build` that fetches all the example company names and saves them to a json file locally, then uses that list to prerender all company routes to static html files.
